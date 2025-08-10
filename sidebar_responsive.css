@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  background: #0e0e0e;
+  color: #fff;
+}
+
+.essentials-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+}
+
+.essentials-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.essentials-header h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #00ffd5;
+}
+
+.essentials-header p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.essentials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.essential-item {
+  background: #1b1b1b;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 8px 20px rgba(0,255,213,0.1);
+}
+
+.essential-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,255,213,0.3);
+}
+
+.essential-item i {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #00ffd5;
+}
+
+.essential-item h3 {
+  margin: 10px 0;
+  font-size: 1.3rem;
+}
+
+.essential-item p {
+  color: #aaa;
+}
+
+/* =================== Responsive Design =================== */
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+  .slideshow-container, .booking-form, .offers-section, .destinations-section, .footer {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul li {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  header, nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slideshow-container {
+    height: auto !important;
+  }
+
+  .slide img {
+    height: auto !important;
+    max-height: 300px;
+  }
+
+  .booking-form input, .booking-form select, .booking-form button {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
+
+  .offers-grid, .destinations-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  footer {
+    text-align: center;
+  }
+}
